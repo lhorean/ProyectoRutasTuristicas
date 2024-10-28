@@ -1,16 +1,22 @@
 #include <SFML/Graphics.hpp>
 #include "map.h"
+#include <iostream>
+using namespace std;
 
 void showMap() {
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Mapa turistico");
+    
+    sf::RenderWindow window(sf::VideoMode(800, 600), "Mapa");
 
-    sf::Texture mapTexture;
-    if (!mapTexture.loadFromFile("mapa.png")) {
-        return;
+    
+    sf::Texture texture;
+    if (!texture.loadFromFile("mapa.png")) {
+        cerr << "Error: No se pudo cargar la imagen." << std::endl;
+       
     }
 
-    sf::Sprite mapSprite;
-    mapSprite.setTexture(mapTexture);
+    
+    sf::Sprite sprite;
+    sprite.setTexture(texture);
 
     while (window.isOpen()) {
         sf::Event event;
@@ -20,6 +26,8 @@ void showMap() {
         }
 
         window.clear();
-
+        window.draw(sprite);
+        window.display();
     }
+  
 }

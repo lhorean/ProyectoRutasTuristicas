@@ -37,7 +37,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\mapa.png">
+    <Image Include="mapa.png">
       <Filter>Archivos de recursos\Images</Filter>
     </Image>
   </ItemGroup>

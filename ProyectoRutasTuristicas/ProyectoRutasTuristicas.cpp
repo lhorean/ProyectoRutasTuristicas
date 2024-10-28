@@ -1,10 +1,12 @@
-
-#include <iostream>
+#include<iostream>
 using namespace std;
-#include "SFML/Graphics.hpp" 
+
+#include "Menu.h"
 
 int main()
 {
 
-}
+    displayMenu();
 
+    return 0;
+}

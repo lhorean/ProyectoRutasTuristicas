@@ -1,4 +1,5 @@
 #include "Menu.h"
+#include "Map.h"
 
 #include <iostream>
 using namespace std;
@@ -18,6 +19,8 @@ void displayMenu() {
 
         switch (opt) {
         case 1:
+
+            showMap();
 
             break;
         case 2:
