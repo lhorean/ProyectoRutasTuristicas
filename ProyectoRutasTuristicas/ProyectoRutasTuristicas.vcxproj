@@ -139,11 +139,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Map.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="ProyectoRutasTuristicas.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Map.h" />
     <ClInclude Include="Menu.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\mapa.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
