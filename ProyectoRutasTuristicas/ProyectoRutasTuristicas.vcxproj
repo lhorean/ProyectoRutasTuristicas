@@ -140,11 +140,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Map.cpp" />
+    <ClCompile Include="MapPoint.cpp" />
+    <ClCompile Include="MapPointList.cpp" />
+    <ClCompile Include="MapRoute.cpp" />
+    <ClCompile Include="MapRouteList.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="ProyectoRutasTuristicas.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Map.h" />
+    <ClInclude Include="MapPoint.h" />
+    <ClInclude Include="MapPointList.h" />
+    <ClInclude Include="MapRoute.h" />
+    <ClInclude Include="MapRouteList.h" />
     <ClInclude Include="Menu.h" />
   </ItemGroup>
   <ItemGroup>
