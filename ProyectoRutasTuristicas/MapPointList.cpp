@@ -1,25 +1,41 @@
-#include "MapPoint.h"
-
+#include "MapPointList.h"
 using namespace std;
 
-MapPoint::MapPoint(string namePoint, int x, int y) : namePoint(namePoint), x(x), y(y), nextPoint(nullptr), prevPoint(nullptr) {}
-
-string MapPoint::getNamePoint() const {
-    return namePoint;
+MapPointList::MapPointList() {
+    this->head = nullptr;
 }
 
-MapPoint* MapPoint::getNextPoint() const {
-    return nextPoint;
+void MapPointList::insertMapPoint(string namePoint, int x, int y) {
+    MapPoint* newPoint = new MapPoint(namePoint, x, y);
+    if (head == nullptr) {
+        head = newPoint;
+    }
+    else {
+        MapPoint* current = head;
+        while (current->getNextPoint() != nullptr) {
+            current = current->getNextPoint();
+        }
+        current->setNextPoint(newPoint);
+        newPoint->setPrevPoint(current);
+    }
 }
 
-MapPoint* MapPoint::getPrevPoint() const {
-    return prevPoint;
+bool MapPointList::nameExists(std::string namePoint) {
+    MapPoint* current = head;
+    while (current != nullptr) {
+        if (current->getNamePoint() == namePoint) {
+            return false;
+        }
+        current = current->getNextPoint();
+    }
+    return true;
 }
 
-void MapPoint::setNextPoint(MapPoint* nextPoint) {
-    this->nextPoint = nextPoint;
-}
-
-void MapPoint::setPrevPoint(MapPoint* prevPoint) {
-    this->prevPoint = prevPoint;
+void MapPointList::displayMapPoints() {
+    MapPoint* current = head;
+    while (current != nullptr) {
+        cout << current->getNamePoint() << ", ";
+        current = current->getNextPoint();
+    }
+    cout << endl; 
 }
