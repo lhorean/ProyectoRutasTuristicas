@@ -4,7 +4,6 @@
 #include "MapPoint.h" 
 
 #include <string>
-#include <iostream>
 
 class MapPointList {
 
