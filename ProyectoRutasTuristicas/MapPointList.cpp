@@ -1,5 +1,7 @@
 #include "MapPointList.h"
+#include <iostream>
 using namespace std;
+
 
 MapPointList::MapPointList() {
     this->head = nullptr;

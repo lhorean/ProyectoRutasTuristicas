@@ -2,8 +2,8 @@
 #define MAPPOINTLIST_H
 
 #include "MapPoint.h" 
-
 #include <string>
+using namespace std;
 
 class MapPointList {
 
